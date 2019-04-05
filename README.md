@@ -37,8 +37,13 @@ RC522   | Arduino Pin
 
 
 # Configuration du Raspberry Pi:strawberry: :pencil2:
-
-Tous d'abord il faut faire démarrer le script python, chromium en mode kiosk et de désactiver la souris à chaque démarrage
+Tous d'abord il faut téléchargé le projet et l'installer sur le Raspberry Pi :
+```bash
+sudo apt-get install git python3-pip -y
+sudo git clone https://github.com/MinePlugins/Badgeuse-Estiam
+pip install -r requirements.txt
+```
+Puis il faut faire démarrer le script python, chromium en mode kiosk et de désactiver la souris à chaque démarrage
 pour ce faire il faut édité le fichier `/home/pi/.config/lxsession/LXDE-pi○/autostart`.
 Remplacer les lignes par celle-ci :
 
@@ -59,6 +64,10 @@ crontab -e
 
 ```
 
+Enfin redémmarer les Raspberry Pi normalement tous s'allume correctement (si il est connecté à internet)
+```bash
+sudo reboot
+```
 ## Présentation
 
 Voilà le résultat final :
