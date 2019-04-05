@@ -1,5 +1,6 @@
-# Badgeuse-Estiam
-Code de la Badgeuse ESTIAM
+# Badgeuse-Estiam  :credit_card: 	
+
+Réalisation complète du code de la badgeuse (API Désactivé et Token retiré)
 
 # Dépendences  :package:
 
@@ -18,9 +19,9 @@ Code de la Badgeuse ESTIAM
 - Un RFID Reader RC522
 - Des badges RFID (Mifare classic)
 
-# Montage du Lecteur
+# Montage du Lecteur  :wrench:
 
-```
+```text
 RC522   | Arduino Pin
   VCC   |  +5V
   RST   |   9
@@ -33,6 +34,30 @@ RC522   | Arduino Pin
   ```
 
 ![Montage](https://github.com/MinePlugins/Badgeuse-Estiam/raw/master/Fritzing/Badgeuse%20ESTIAM_bb.png)
+
+
+# Configuration du Raspberry Pi:strawberry: :pencil2:
+
+Tous d'abord il faut faire démarrer le script python, chromium en mode kiosk et de désactiver la souris à chaque démarrage
+pour ce faire il faut édité le fichier `/home/pi/.config/lxsession/LXDE-pi○/autostart`.
+Remplacer les lignes par celle-ci :
+
+```bash
+@python3 /home/pi/app.py
+@sleep 10
+@chromium-browser --incognito --kiosk http://127.0.0.1:8000
+@unclutter -idle 0
+```
+
+Puis pour préserver la planète :earth_americas: nous allons faire une tâche cron qui éteint l'écran tous les soir à 19h du lundi au vendredi et une autre tâche qui allume tous les jour du lundi au vendredi à 8h
+
+```bash
+crontab -e
+
+0 8 * * 1-5 vcgencmd display_power 1 >/dev/null 2>&1
+0 19 * * 1-5 vcgencmd display_power 0 >/dev/null 2>&1
+
+```
 
 ## Présentation
 
