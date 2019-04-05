@@ -68,6 +68,10 @@ Enfin redémmarer les Raspberry Pi normalement tous s'allume correctement (si il
 ```bash
 sudo reboot
 ```
+# UI
+
+[Lien .pdf du design](https://github.com/MinePlugins/Badgeuse-Estiam/raw/master/Design/Design%20Badgeuse.pdf)
+
 ## Présentation
 
 Voilà le résultat final :
@@ -80,4 +84,8 @@ En cas d'erreur :
 
 En en fonctionnement normal :
 
-![Error](https://github.com/MinePlugins/Badgeuse-Estiam/raw/master/Github%20data/normal.jpg)
+![Normal](https://github.com/MinePlugins/Badgeuse-Estiam/raw/master/Github%20data/normal.jpg)
+
+En cas de dysfonctionnement :
+
+![Dys](https://github.com/MinePlugins/Badgeuse-Estiam/raw/master/Github%20data/probleme.jpg)
