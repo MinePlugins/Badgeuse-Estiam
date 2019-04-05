@@ -1,7 +1,17 @@
 #include <SPI.h>
 #include <RFID.h>
 #include <ArduinoJson.h>
-
+/*
+RC522   | Arduino Pin
+  VCC   |  +5V
+  RST   |   9
+  GND   |   GND
+  MISO  |   12
+  MOSI  |   11
+  SCK   |   13
+  NSS   |   10
+  IRC   |   /
+*/
 RFID rfid(10,9); // Pin du lecteur de carte
 
 int UID[5]; // Taille de l'uid
